@@ -39,34 +39,37 @@ public class teacher extends Employee {
         int n = input.nextInt();
         System.out.println("enter details of each teacher : ");
 
-        for (int i = 1; i < n; ++i) {
+        for (int i = 1; i <= n; ++i) {
 
             
             System.out.println("enter details of teacher " + i);
             System.out.println("enter teacher number ");
-            obj[i].empid = input.nextInt();
+            int u = input.nextInt();
             input.nextLine();
             System.out.println("enter teacher name ");
-            obj[i].name = input.nextLine();
+            String v = input.nextLine();
             input.nextLine();
             System.out.println("enter salary ");
-            obj[i].salary = input.nextInt();
+            int w= input.nextInt();
             input.nextLine();
             System.out.println("enter address ");
-            obj[i].address = input.nextLine();
+            String x= input.nextLine();
             input.nextLine();
             System.out.println("enter department ");
-            obj[i].department = input.nextLine();
+            String y = input.nextLine();
             input.nextLine();
             System.out.println("enter subjects ");
-            obj[i].subjects = input.nextLine();
+            String z= input.nextLine();
             input.nextLine();
+            obj[i]=new teacher(u,v,w,x,y,z);
+            
         }
         System.out.println("-----------Teacher Details--------------");
-        for (int i = 0; i < n; ++i) {
+        for (int i = 1; i <= n; ++i) {
         	obj[i].display();
         	
         }
 	}
 
 }
+
