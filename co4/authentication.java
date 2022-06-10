@@ -1,6 +1,12 @@
-package diablo;
+package diablo
+
 import java.util.*;
-public class authentication {
+class pswException extends Exception{
+	public pswException(String s){
+		super(s);
+	}
+}
+public class autentication {
 
 	public static void main(String[] args) {
 		String user="siva";
@@ -17,11 +23,11 @@ public class authentication {
 			System.out.println("permission granted");
 		}
 		else {
-			throw new credentialexception("invalid Credential");
+			throw new pswException("invalid Credential");
 		}
 	}
-	catch(credentialexception e) {
-		System.out.println(e);
+	catch(pswException e) {
+		System.out.println(e.getMessage());
 	}
 	}
 
